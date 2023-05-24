@@ -12,5 +12,5 @@
 **Example result video**
 
 <p align="center">
-    <img src="./assets/result.gif" width="200" height="500"/>
+    <img src="./assets/result.gif" width="200" height="400"/>
 </p
