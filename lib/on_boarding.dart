@@ -37,7 +37,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
   }
 
   _fingerValidate() async {
-    // await LocalAuth().fingerAuth().then((value) => print(value));
+    await LocalAuth().fingerAuth().then((value) => print(value));
     await LocalAuth().fingerAuth().then((value) => value ? statePage() : null);
   }
 
@@ -45,9 +45,21 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text(
-          'On Boarding',
-          style: Theme.of(context).textTheme.headline5,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'On Boarding',
+              style: Theme.of(context).textTheme.headline5,
+            ),
+            const SizedBox(height: 20,),
+            FlatButton(
+              onPressed: () {
+                _fingerValidate();
+              },
+              child: const Text("Show Local Authentication"),
+            )
+          ],
         ),
       ),
     );
