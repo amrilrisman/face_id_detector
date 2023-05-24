@@ -11,4 +11,4 @@
 
 **Example result video**
 
-<img src="./assets/result.gif"/>
+<img src="./assets/result.gif" width="200" height="500"/>
